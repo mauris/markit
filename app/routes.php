@@ -10,3 +10,8 @@
 | and give it the Closure to execute when that URI is requested.
 |
 */
+
+Route::any('{slug}', function ($slug) {
+    $controller = new Mauris\Markit\RenderController();
+    return $controller->render($slug);
+})->where('slug', '([A-z\d-\/_.]+)?');
