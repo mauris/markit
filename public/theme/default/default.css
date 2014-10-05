@@ -1,0 +1,11 @@
+@import url('//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css');
+
+body {
+    padding-top: 30px;
+}
+
+@media (max-width: 980px) {
+    body {
+        padding-top: 0;
+    }
+}
