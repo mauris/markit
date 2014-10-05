@@ -10,8 +10,12 @@
     </head>
     <body>
         <div class="container">
-            {{ isset($content) ? $content : '' }}
-            @yield('content')
+            <div class="row">
+                <div class="col-md-12">
+                    {{ isset($content) ? $content : '' }}
+                    @yield('content')
+                </div>
+            </div>
         </div>
     </body>
 </html>
