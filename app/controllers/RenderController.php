@@ -7,6 +7,8 @@ use Config;
 use Markdown;
 use App;
 use View;
+use Cache;
+use File;
 
 class RenderController extends Controller
 {
@@ -17,8 +19,7 @@ class RenderController extends Controller
         }
         $path = Config::get('markit.repository') . $path;
         if (file_exists($path)) {
-            $content = Markdown::render(file_get_contents($path));
-            $title = self::getH1Text($content);
+            list($content, $title) = $this->loadContent($path);
             if (!$title) {
                 $title = Config::get('markit.default_title');
             }
@@ -28,6 +29,23 @@ class RenderController extends Controller
         } else {
             App::abort(404);
         }
+    }
+
+    private function loadContent($path)
+    {
+        if (Cache::has($path . '-lastMod') && Cache::has($path . '-content')) {
+            $lastMod = File::lastModified($path);
+            if (Cache::get($path . '-lastMod') == $lastMod) {
+                return Cache::get($path . '-content');
+            }
+        }
+
+        $lastMod = File::lastModified($path);
+        $content = Markdown::render(file_get_contents($path));
+        $title = self::getH1Text($content);
+        Cache::put($path . '-lastMod', $lastMod, 720);
+        Cache::put($path . '-content', array($content, $title), 720);
+        return array($content, $title);
     }
 
     private static function getH1Text($string)
