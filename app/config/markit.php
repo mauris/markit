@@ -1,5 +1,7 @@
 <?php
 
 return array(
-    'repository' => public_path()
+    'default_title' => 'Hello World!',
+    'title_prefix' => 'Markit - ',
+    'repository' => public_path(),
 );
