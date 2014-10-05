@@ -1,25 +1,23 @@
-## Laravel PHP Framework
+# Markit
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/downloads.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+Markit turns your Markdown documents into website quickly. There is no time to build the pages, you need to rule the world.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, and caching.
+## Features
+- uses [Parsedown Extra](https://github.com/erusev/parsedown-extra) in the engine room to build your documents
+- has caching that updates as you modify your document.
+- No-frills, easy to configure.
+- Fully customizable. Do what you like.
 
-Laravel aims to make the development process a pleasing one for the developer without sacrificing application functionality. Happy developers make the best code. To this end, we've attempted to combine the very best of what we have seen in other web frameworks, including frameworks implemented in other languages, such as Ruby on Rails, ASP.NET MVC, and Sinatra.
+## Get Started
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+1. Start the Clone wars.
+> git clone https://github.com/mauris/markit.git markit
 
-## Official Documentation
+2. Serve the public folder to your favourite web server
+> It was served on Laravel Homestead during development.
 
-Documentation for the entire framework can be found on the [Laravel website](http://laravel.com/docs).
+3. Follow what is on the welcome page to get started.
 
-### Contributing To Laravel
+## License
 
-**All issues and pull requests should be filed on the [laravel/framework](http://github.com/laravel/framework) repository.**
-
-### License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+Markit is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
