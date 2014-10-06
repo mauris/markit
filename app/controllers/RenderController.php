@@ -14,10 +14,14 @@ class RenderController extends Controller
 {
     public function render($path)
     {
+        $repository = Config::get('markit.repository');
+        if (substr($repository, -1) != '/') {
+            $repository .= '/';
+        }
         if (substr($path, -1) == '/') {
             $path .= 'index.md';
         }
-        $path = Config::get('markit.repository') . $path;
+        $path = $repository . $path;
         if (file_exists($path)) {
             list($content, $title) = $this->loadContent($path);
             if (!$title) {
