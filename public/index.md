@@ -16,6 +16,7 @@ You are _successfully_ running [Markit](https://github.com/mauris/markit) now.
 - You can customize the theme / skeleton by modifying the `app/views/default.blade.php` file.
 - 404 pages can be modified in the `app/views/404.blade.php` file.
 - The default theme uses [Twitter Bootstrap](http://getbootstrap.com/), feel free to customize however you want.
+- You can add your Google Analytics code in the `app/config/markit.php` file under the `ga` key.
 
 > Note that images and other resources must be in the public folder  
 > in order for your visitors to access them in the Markdown-rendered pages.
@@ -31,4 +32,4 @@ Markit was made possible with thanks to:
 - [Bootstrap, made by the Good Guys @ Twitter](http://getbootstrap.com/)
 
 If you find any issue with Markit, feel free to [raise it up on Github](https://github.com/mauris/markit/issues)  
-and our [friendly customer service support team](https://mauris.sg) will attend to you shortly.
+and our [friendly customer service support team](http://mauris.sg) will attend to you shortly.
