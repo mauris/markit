@@ -11,7 +11,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    {{ isset($content) ? $content : '' }}
+                    {{ $content or '' }}
                     @yield('content')
                 </div>
             </div>
